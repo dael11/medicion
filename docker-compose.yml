@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-metrologia}
+      POSTGRES_USER: ${DB_USER:-metrologia_app}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?define DB_PASSWORD en .env}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      # carga schema + datos la PRIMERA vez que se crea la BD
+      - ./db/01_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./db/02_datos_iniciales.sql:/docker-entrypoint-initdb.d/02_datos_iniciales.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-metrologia_app} -d ${DB_NAME:-metrologia}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-metrologia}
+      DB_USER: ${DB_USER:-metrologia_app}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?define JWT_SECRET en .env}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-8h}
+      FRONTEND_URL: ${FRONTEND_URL:-*}
+      TRUST_PROXY: "1"
+    ports:
+      - "${APP_PORT:-4000}:4000"
+    volumes:
+      - uploads:/app/backend/uploads
+
+volumes:
+  db_data:
+  uploads:

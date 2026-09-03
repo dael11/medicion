@@ -1,0 +1,218 @@
+.dashboard{
+font-family:system-ui;
+background:#f4f6f9;
+min-height:100vh;
+padding:20px;
+}
+
+/* barra superior */
+
+.topbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:30px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.logo img{
+width:40px;
+}
+
+.search{
+width:380px;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.logout{
+background:#dc2626;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* layout */
+
+.layout{
+display:grid;
+grid-template-columns: 550px 1fr;
+gap:30px;
+margin-top:30px;
+}     
+/* panel general */
+
+.panel{
+background:#b5dddd;
+border-radius:12px;
+padding:20px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* medicion */
+
+.proceso{
+width:300px;
+background: #f8fffb;
+}
+
+.proceso-info p{
+margin:6px 0;
+color: #b5dddd;
+}
+
+.sin{
+color:#000000;
+}
+
+/* modulos */
+.modulos{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+width:220px;
+padding:25px;
+border-radius:12px;
+background:#ffffff;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+box-shadow:0 8px px rgba(0,0,0,0.15);
+}
+
+
+/*card2*/
+
+
+
+.card2{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:50px;
+width:220px;
+padding:25px;
+border-radius:12px;
+background:#ffffff;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.2s;
+left: auto;
+}
+
+.card2:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/*card3*/
+
+
+
+.card1{
+display:grid ;
+grid-template-columns:repeat(3 ,20fr);
+gap:20px;
+width:220px;
+padding:25px;
+border-radius:12px;
+background:#ffffff;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.2s;
+}
+
+.card1:hover  {
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+/* panel pieza */
+
+.pieza-panel{
+position:absolute;
+top:90px;
+right:20px;
+background:rgb(243, 243, 243);
+padding:15px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+width:230px;
+}
+
+.pieza-actions{
+display:flex;
+flex-direction:column;
+gap:8px;
+margin-top:10px;
+}
+
+.pieza-actions button{
+background:#054ce6;
+border:none;
+color:white;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* visor */
+
+.visor{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.visor-content{
+background:white;
+padding:20px;
+border-radius:10px;
+position:relative;
+}
+
+.visor-content img{
+max-width:700px;
+max-height:500px;
+}
+
+.cerrar{
+position:absolute;
+top:10px;
+right:10px;
+background:#dc2626;
+border:none;
+color:white;
+padding:5px 8px;
+border-radius:5px;
+cursor:pointer;
+}

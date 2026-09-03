@@ -1,0 +1,9 @@
+**/node_modules
+**/build
+**/.git
+**/.env
+**/.env.local
+**/.env.*.local
+**/npm-debug.log*
+backend/uploads/*
+!backend/uploads/.gitkeep

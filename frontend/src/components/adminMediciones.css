@@ -1,0 +1,149 @@
+.admin-root {
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  height: 100vh;
+}
+
+/* HEADER */
+
+.admin-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.btn-salir {
+  padding: 8px 16px;
+  background: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PANEL */
+
+.admin-panel {
+  display: flex;
+  gap: 20px;
+}
+
+/* ===== TABLA ===== */
+
+.panel-tabla {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  min-width: 420px;
+  flex: 2.2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+th {
+  background: #0f172a;
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.vacio {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* BADGES */
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12 px;
+  color: white;
+}
+
+.normal { background: #64748b; }
+.urgente { background: #f59e0b; }
+.critico { background: #dc2626; }
+
+/* BOTÓN TERMINAR */
+
+.btn-terminar {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== GANTT ===== */
+
+.panel-gantt {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4 px 14px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.gantt-header {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+.slot {
+  width: 55px;
+  height: 37px;
+  border: 1px solid #ddd;
+  
+  text-align: center;
+  font-size: 22px;
+  background: #e5e7eb;
+}
+
+/* FILA */
+
+.gantt-row {
+  height: 28px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+/* BARRA */
+
+.barra {
+  height: 100%;
+  border-radius: 30px;
+}
+
+/* ESTADOS */
+
+.proceso {
+  background: #22c55e;
+}
+
+.pendiente.normal {
+  background: #94a3b8;
+}
+
+.pendiente.urgente {
+  background: #fbbf24;
+}
+
+.pendiente.critico {
+  background: #ef4444;
+}

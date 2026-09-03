@@ -1,0 +1,11 @@
+node_modules/
+**/node_modules/
+frontend/build/
+backend/uploads/*
+!backend/uploads/.gitkeep
+.env
+.env.local
+.env.*.local
+frontend/.env.local
+npm-debug.log*
+.DS_Store

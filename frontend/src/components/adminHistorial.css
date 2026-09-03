@@ -1,0 +1,90 @@
+.historial-container {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* BOTÓN VOLVER */
+
+.btn-volver {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.btn-volver:hover {
+  background: #334155;
+}
+
+/* BUSCADOR */
+
+.buscador {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
+
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* TABLA */
+
+.tabla-historial {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ENCABEZADO */
+
+.tabla-historial thead {
+  background: #0ea5e9;
+  color: white;
+}
+
+.tabla-historial th {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FILAS */
+
+.tabla-historial td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.tabla-historial tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* FILA TERMINADA */
+
+.fila-terminada {
+  background: #ecfdf5;
+}
+
+/* ESTADO */
+
+.estado-terminado {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+/* SIN DATOS */
+
+.sin-datos {
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
